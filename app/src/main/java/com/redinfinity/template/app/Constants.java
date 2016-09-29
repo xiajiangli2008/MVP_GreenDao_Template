@@ -67,10 +67,4 @@ public class Constants {
      */
     public static final String SinaAppId = "";
     public static final String SinaAppKey = "";
-
-    /**
-     * 短信分享和其他分享方式
-     */
-    public static final int OtherShare = 1;
-    public static final int SMSShare = 2;
 }
