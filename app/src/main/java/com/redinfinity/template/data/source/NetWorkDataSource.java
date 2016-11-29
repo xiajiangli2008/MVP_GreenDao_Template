@@ -19,7 +19,7 @@ public interface NetWorkDataSource<T> {
 
         void onSuccess(BaseModle<T> response);
         void onAfter();
-        void onFailed();
+        void onError(int errorCode, String errorMessage);
     }
 
     //网络请求数据函数接口

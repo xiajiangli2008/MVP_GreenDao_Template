@@ -39,8 +39,9 @@ public class TempPresenter implements TempContract.Presenter {
             }
 
             @Override
-            public void onFailed() {
+            public void onError(int errorCode, String errorMessage) {
 
+                mView.dealErrorMessage(errorCode, errorMessage);
             }
         });
     }

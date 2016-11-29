@@ -47,13 +47,10 @@ public class NetWorkRepository implements NetWorkDataSource {
 
                         if (response.isStatus()){
 
+                            callback.onSuccess(response);
                         }else{
 
-                            if (response.getErrcode() == 401){
-                                //token过期情况下的特殊处理
-
-                            }
-                            T.showShort(mContext, response.getMessage());
+                            callback.onError(response.getErrcode(), response.getMessage());
                         }
                     }
 

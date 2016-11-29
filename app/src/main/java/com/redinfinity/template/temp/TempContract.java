@@ -16,6 +16,7 @@ public interface TempContract {
         void onListener();
         void showProgressDialog();
         void dismissProgressDialog();
+        void dealErrorMessage(int errorCode, String errorMessage);
     }
 
     interface Presenter extends BasePresenter {

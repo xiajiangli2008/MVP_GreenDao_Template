@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.redinfinity.template.R;
 import com.redinfinity.template.app.BaseActivity;
+import com.redinfinity.template.data.source.NetWorkErrorCenter;
 
 /**
  * Created by xiejian on 16/6/30.
@@ -32,6 +33,13 @@ public class TempFragment extends Fragment implements TempContract.View {
     @Override
     public void setPresenter(TempContract.Presenter presenter) {
         mPresernter = presenter;
+    }
+
+    @Override
+    public void dealErrorMessage(int errorCode, String errorMessage) {
+
+        NetWorkErrorCenter.getInstance().dealErrorFromNet(mActivity,
+                errorCode, errorMessage);
     }
 
     @Nullable
